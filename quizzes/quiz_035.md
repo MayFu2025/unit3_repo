@@ -18,4 +18,4 @@ def mystery(list1:list, list2:list) -> list:
 
 ### Evidence
 ![](images/quiz_035_evidence.png)
-*fig. 2* **Screenshot of output in console**
+*fig. 2* **Screenshot of output in console when running test file**
