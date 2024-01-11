@@ -33,4 +33,5 @@ may_favorite_book = Book("Wolf by Wolf", "Ryan Gosling", "English", "1000", 5, "
 yuiko_favorite_book = Book("Little Prince", "Saint-Ex", "French", "500", 5, "children")
 
 print(may_favorite_book.introduce_book())
+print(may_favorite_book.change_rating())
 
