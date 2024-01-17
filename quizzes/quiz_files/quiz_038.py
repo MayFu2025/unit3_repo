@@ -8,7 +8,7 @@ class Compound_Interest:
         self.principal = principal
     def set_rate(self, rate):
         self.rate = rate
-    def set_years(self, n_years):
+    def set_years(self, n_years:int):
         self.n_years = n_years
 
     def calculate_interest(self):
