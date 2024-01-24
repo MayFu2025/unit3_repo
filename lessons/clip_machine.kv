@@ -1,0 +1,86 @@
+Screen:
+        size: 500, 500
+
+        MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint: 0.8, 0.8
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                FitImage:
+                        source: 'paperclip.jpg'
+                        size_hint: 0.2, 1
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 0.8, 1
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                size_hint: 1, 0.2
+                                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                padding: 10
+
+                                MyLabel:
+                                        text: "Money"
+                                MyLabel:
+                                        id: current_money
+                                        text: "$500"
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                size_hint: 1, 0.2
+                                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                padding: 10
+
+                                MyLabel:
+                                        id: current_wire
+                                        text: "50m"
+                                MyLabel:
+                                        text: "$500/10m"
+
+                                MDRaisedButton:
+                                        text: "Buy"
+                                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                        on_press: app.buy_wire()
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                size_hint: 1, 0.2
+                                padding: 10
+
+                                MyLabel:
+                                        text: "0.01m per clip"
+
+                                MDRaisedButton:
+                                        text: "Make"
+                                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                        on_press: app.make_clip()
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                size_hint: 1, 0.2
+                                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                padding: 10
+
+                                MyLabel:
+                                        text: "Clips"
+                                MyLabel:
+                                        id: current_clips
+                                        text: "0"
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                size_hint: 1, 0.2
+                                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                                padding: 10
+
+                                MyLabel:
+                                        text: "Set price"
+
+                                MDTextField:
+
+
+
+<MyLabel>:
+        font_size: 25
