@@ -1,0 +1,141 @@
+Screen:
+
+        BoxLayout:
+                orientation: 'vertical'
+                spacing: 0
+                padding: 0
+
+
+
+                MDTextField:
+                        id: input_field
+                        multiline: False
+                        halign: 'right'
+                        font_size: '32sp'
+                        height: root.height*0.2
+                        padding: 0, 0, 0, 0
+                        spacing: 0
+
+                GridLayout:
+                        cols: 4
+                        width: root.width
+                        height: root.height
+                        padding: 0, 0, 0, 0
+                        spacing: 0
+
+                        MDRaisedButton:
+                                text: 'AC'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_ac_press()
+                                color: 99, 94, 93, 1
+
+                        MDRaisedButton:
+                                text: '+/−'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_plusminus_press()
+
+                        MDRaisedButton:
+                                text: '%'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_percent_press()
+
+                        MDRaisedButton:
+                                text: '÷'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('/')
+
+                        MDRaisedButton:
+                                text: '7'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('7')
+
+                        MDRaisedButton:
+                                text: '8'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('8')
+
+                        MDRaisedButton:
+                                text: '9'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('9')
+
+                        MDRaisedButton:
+                                text: 'x'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('*')
+
+                        MDRaisedButton:
+                                text: '4'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('4')
+
+                        MDRaisedButton:
+                                text: '5'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('5')
+
+                        MDRaisedButton:
+                                text: '6'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('6')
+
+                        MDRaisedButton:
+                                text: '−'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('-')
+
+                        MDRaisedButton:
+                                text: '1'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('1')
+
+                        MDRaisedButton:
+                                text: '2'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('2')
+
+                        MDRaisedButton:
+                                text: '3'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('3')
+
+                        MDRaisedButton:
+                                text: '+'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('+')
+
+                        MDRaisedButton:
+                                text: '0'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('0')
+
+                        MDRaisedButton:
+                                text: '.'
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_button_press('.')
+
+                        MDRaisedButton:
+                                text: '='
+                                width: root.width*0.25
+                                height: root.height*0.1
+                                on_press: app.on_equals_press()
+
+                    # ... Repeat for other digits and operators ...
