@@ -1,0 +1,24 @@
+ScreenManager:
+        FirstScreen:
+                name: "First"
+        SecondScreen:
+                name: "Second"
+
+
+<FirstScreen>:
+        MDLabel:
+                text: "This is the First Screen"
+        MDFloatingActionButton:
+                icon: "arrow-right"
+                style: "standard"
+                on_press:
+                        root.try_change() #1st way to change screen: define function on python
+
+<SecondScreen>:
+        MDLabel:
+                text: "This is the Second Screen"
+        MDFloatingActionButton:
+                icon: "arrow-right"
+                style: "standard"
+                on_press:
+                        root.parent.current = "First" #2nd way to change screen: change current screen

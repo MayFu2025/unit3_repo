@@ -1,0 +1,127 @@
+ScreenManager:
+        LoginScreen:
+                name: "login"
+        RegisterScreen:
+                name: "register"
+
+#<Template>:
+#        FitImage:
+#                source: 'background.jpg'
+#                size_hint: 1, 1
+#                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+#                opacity: 1
+#
+#                MDBoxLayout:
+#                        size_hint: 0.8, 0.9
+#                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+#                        md_bg_color: "white"
+#                        opacity: 0.7
+#                        orientation: 'vertical'
+#                        padding: 100
+
+<LoginScreen>:
+        MDBoxLayout:
+                size_hint: 0.8, 0.9
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                md_bg_color: "white"
+                opacity: 0.7
+                orientation: 'vertical'
+                padding: 100
+
+                MDLabel:
+                        text: "Login"
+                        font_style: 'H3'
+                        size_hint: 1, 0.4
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        halign: 'center'
+
+                MDTextField:
+                        id: username
+                        hint_text: "Enter username or email"
+                        icon_left: 'email'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+                MDTextField:
+                        id: password
+                        hint_text: "Enter password"
+                        icon_left: 'key'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        password: True
+
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 0.75, 0.2
+
+                        MDRaisedButton:
+                                id: login_button
+                                text: "Login"
+                                font_size: 36
+                                size_hint: 0.5, 0.5
+
+                        MDRaisedButton:
+                                id: register_button
+                                text: "Sign up"
+                                font_size: 36
+                                size_hint: 0.5, 0.5
+                                on_release: root.try_change()
+
+<RegisterScreen>:
+        MDBoxLayout:
+                size_hint: 0.8, 0.9
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                md_bg_color: "white"
+                opacity: 0.7
+                orientation: 'vertical'
+                padding: 100
+
+                MDLabel:
+                        text: "Register"
+                        font_style: 'H3'
+                        size_hint: 1, 0.4
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        halign: 'center'
+
+                MDTextField:
+                        id: username
+                        hint_text: "Enter username"
+                        icon_left: 'account'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                MDTextField:
+                        id: email
+                        hint_text: "Enter email"
+                        icon_left: 'email'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+                MDTextField:
+                        id: password
+                        hint_text: "Enter password"
+                        icon_left: 'key'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        password: True
+
+                MDTextField:
+                        id: password
+                        hint_text: "Confirm password"
+                        icon_left: 'key'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        password: True
+
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 0.75, 0.2
+
+                        MDRaisedButton:
+                                id: submit_button
+                                text: "Submit"
+                                font_size: 36
+                                size_hint: 0.5, 0.5
+
+                        MDRaisedButton:
+                                id: cancel_button
+                                text: "Cancel"
+                                font_size: 36
+                                size_hint: 0.5, 0.5
+                                on_release: root.try_change()

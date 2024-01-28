@@ -1,0 +1,89 @@
+Screen:
+
+        MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, 1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                md_bg_color: "#fffaed"
+
+                MDBoxLayout:
+                        id: twofoureightlabel
+                        pos_hint: {'center_x':0.5, 'center_y':0.5}
+                        orientation: 'horizontal'
+                        size_hint: 0.9, 0.125
+
+                        MDLabel:
+                                text: "2048"
+                                color: "#766e65"
+                                size_hint: 0.4, 0.8
+                                font_size: '40pt'
+                                halign: 'center'
+                                bold: True
+
+                        MDBoxLayout:
+                                size_hint: 0.8, 0.8
+                                md_bg_color: "white"
+                                orientation: 'horizontal'
+
+                                MDLabel:
+                                        text: "score"
+                                        md_bg_color: "#bcac9f"
+                                        size_hint: 0.5, 1
+                                MDLabel:
+                                        text: "high"
+                                        md_bg_color: "#bcac9f"
+                                        size_hint: 0.5, 1
+
+                MDLabel:
+                        pos_hint: {'center_x':0.5, 'center_y':0.5}
+                        size_hint: 0.9, 0.125
+                        text: "This is where the label goes"
+
+                MDBoxLayout:
+                        orientation: 'vertical'
+                        pos_hint: {'center_x':0.5, 'center_y':0.5}
+                        size_hint: 0.9, 0.75
+                        md_bg_color: "#bcac9f"
+                        radius: [10, 10, 10, 10]
+                        padding: dp(10)
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                MyButton:
+                                MyButton:
+                                MyButton:
+                                MyButton:
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                MyButton:
+                                MyButton:
+                                MyButton:
+                                MyButton:
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                MyButton:
+                                MyButton:
+                                MyButton:
+                                MyButton:
+
+                        MDBoxLayout:
+                                orientation: 'horizontal'
+                                MyButton:
+                                MyButton:
+                                MyButton:
+                                MyButton:
+
+
+<MyButton>
+        size_hint: 1,1
+        padding: dp(10)
+        MDFlatButton:
+                radius: [10, 10, 10, 10]
+                size_hint: 1, 1
+                md_bg_color: "#eee4da"
+                font_size: "30pt"
+                halign: 'center'
+                on_press:
+                        app.button_pressed(self)

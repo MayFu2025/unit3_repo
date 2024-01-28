@@ -1,0 +1,26 @@
+ScreenManager:
+        MysteryPageA:
+                name: 'A'
+        MysteryPageB:
+                name: 'B'
+
+
+<MysteryPageA>
+        MDLabel:
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                text: 'This is mystery page A, you pressed the button!'
+
+        MDFloatingActionButton:
+                icon: "arrow-right"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+                on_press: root.manager.current = 'B'
+
+<MysteryPageB>
+        MDLabel:
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                text: 'This is mystery page B, you pressed the button!'
+
+        MDFloatingActionButton:
+                icon: "arrow-right"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+                on_press: root.manager.current = 'A'
