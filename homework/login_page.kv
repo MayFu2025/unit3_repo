@@ -20,7 +20,9 @@ ScreenManager:
 #                        padding: 100
 
 <LoginScreen>:
-        MDBoxLayout:
+        FitImage:
+                source: "background.jpg"
+        MDCard:
                 size_hint: 0.8, 0.9
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 md_bg_color: "white"
@@ -52,22 +54,28 @@ ScreenManager:
                 MDBoxLayout:
                         orientation: 'horizontal'
                         size_hint: 0.75, 0.2
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        spacing: 50
 
                         MDRaisedButton:
                                 id: login_button
                                 text: "Login"
                                 font_size: 36
-                                size_hint: 0.5, 0.5
+                                size_hint_x: 0.5
+                                pos_hint_x: 0
 
                         MDRaisedButton:
                                 id: register_button
                                 text: "Sign up"
                                 font_size: 36
-                                size_hint: 0.5, 0.5
+                                size_hint_x: 0.5
+                                pos_hint_x: 1
                                 on_release: root.try_change()
 
 <RegisterScreen>:
-        MDBoxLayout:
+        FitImage:
+                source: "background.jpg"
+        MDCard:
                 size_hint: 0.8, 0.9
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 md_bg_color: "white"
@@ -112,16 +120,20 @@ ScreenManager:
                 MDBoxLayout:
                         orientation: 'horizontal'
                         size_hint: 0.75, 0.2
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        spacing: 50
 
                         MDRaisedButton:
                                 id: submit_button
                                 text: "Submit"
                                 font_size: 36
-                                size_hint: 0.5, 0.5
+                                size_hint_x: 0.5
+                                pos_hint_x: 0
 
                         MDRaisedButton:
                                 id: cancel_button
                                 text: "Cancel"
                                 font_size: 36
-                                size_hint: 0.5, 0.5
+                                size_hint_x: 0.5
+                                pos_hint_x: 1
                                 on_release: root.try_change()
