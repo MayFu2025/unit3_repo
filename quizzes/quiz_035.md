@@ -1,3 +1,12 @@
+# Quiz 035
+<hr>
+
+### Prompt
+![](images/quiz_035_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+```.py
 class Account:
     def __init__(self):
         self.balance = 0
@@ -24,3 +33,8 @@ class Account:
     def deposit(self, amount:int) -> str:
         self.balance += amount
         return f"New balance: {self.balance} USD"
+```
+
+### Evidence
+![](images/quiz_035_evidence.png)
+*fig. 2* **Screenshot of output in console when running test file**

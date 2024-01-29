@@ -1,27 +1,14 @@
-from matplotlib import pyplot as plt
-import random
+from kivymd.app import MDApp
 
-class SalemanMap:
-    def __init__(self):
-        self.x = []
-        self.y = []
-        self.name = None
+class quiz_039(MDApp):
+    def build(self):
+        self.count = 0
+        return
 
-    def get_map(self):
+    def button_pressed(self):
+        self.count += 1
+        label = self.root.ids.my_label
+        label.text = f"Count {self.count}"
 
-        for n in range(len(self.name)):
-            plt.plot((self.x[n]), (self.y[n]), marker="o", label=self.name[n])
-        plt.show()
-
-    def generate_data(self, names:list):
-        self.name = names
-        for i in names:
-            self.x.append(random.randint(0,100))
-            self.y.append(random.randint(0,100))
-
-
-# x: list[int], y: list[int], name: list[str]
-
-test = SalemanMap()
-test.generate_data(['Kobe', 'Tokyo', 'Nagoya', 'Kyoto', 'Saitama', "Yokohama"])
-test.get_map()
+show = quiz_039()
+show.run()

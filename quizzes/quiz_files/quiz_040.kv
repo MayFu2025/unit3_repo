@@ -1,34 +1,22 @@
 Screen:
+        id: my_screen
         size: 1000,1000
+        md_bg_color: "white"
 
         MDRaisedButton:
-                pos: 100,100
-                text: "+"
+                id: my_button
+                pos: 0,0
+                text: "Dark Mode"
+                text_color: "#999999"
+                md_bg_color: "black"
+                on_press:
+                        app.button_pressed()
+                        if self.parent.md_bg_color == [1, 1, 1, 1]: self.parent.md_bg_color = "black"
+                        else: self.parent.md_bg_color = "white"
 
 
-        MDBoxLayout:
-                id: box_layout
-                orientation: "horizontal"
-                size_hint: 0.7, 0.3
-                pos_hint: {"center_x":0.5, "center_y":0.5}
-                halign: "center"
-                valign: "center"
-
-                MDLabel:
-                        id: my_label
-                        text: "Count 0"
-                        halign: "center"
-                        size_hint: 0.5, 1
-                        pos_hint: {"center_x":0.5, "center_y":0.5}
-                        font_size: "34pt"
-
-                MDRaisedButton:
-                        id: my_button
-                        size_hint: 0.5, 1
-                        font_size: "34pt"
-                        text: "Add +1"
-                        md_bg_color: "black"
-                        on_press:
-                                app.button_pressed()
-
-
+        MDLabel:
+                text: "May"
+                font_style: "H2"
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .5}

@@ -1,11 +1,50 @@
 Screen:
-        size: 1000,1000
+        MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.8, 0.8
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
-        MDRaisedButton:
-                pos: 0,0
-                text: "Dark Mode"
-                on_press: app.theme_cls.theme_style = "Dark"
+                MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint: 1, 0.25
 
-        MDLabel:
-                text: "May"
-                pos_hint: {"center_x": .5, "center_y": .5}
+                        MDLabel:
+                                text: "TIC TAC TOE"
+                                halign: 'center'
+
+                        MDLabel:
+                                id: turn_label
+                                text: "Player 1's Turn"
+                                halign: 'center'
+
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 1, 0.25
+
+                        MyButton:
+                        MyButton:
+                        MyButton:
+
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 1, 0.25
+
+                        MyButton:
+                        MyButton:
+                        MyButton:
+
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 1, 0.25
+
+                        MyButton:
+                        MyButton:
+                        MyButton:
+
+
+<MyButton>:
+        size_hint: 1, 1
+        md_bg_color: '#ff0000'
+        text_color: "#ffffff"
+        on_press:
+                app.button_pressed(self)

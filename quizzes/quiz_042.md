@@ -1,3 +1,36 @@
+# Quiz 042
+<hr>
+
+### Prompt
+![](images/quiz_042_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+Python code:
+```.py
+from kivymd.app import MDApp
+from kivy.core.window import Window
+from kivymd.uix.screen import MDScreen
+
+class quiz_042(MDApp): #Meant to be named mystery
+    def build(self):
+        Window.size = (400, 700)
+        return
+
+class MysteryPageA(MDScreen):
+    def message1(self):
+        self.parent.current = 'Second'
+    pass
+
+class MysteryPageB(MDScreen):
+    def message2(self):
+        self.parent.current = 'First'
+
+t = quiz_042()
+t.run()
+```
+Kivymd code:
+```.kv
 ScreenManager:
         MysteryPageA:
                 name: 'A'
@@ -26,3 +59,9 @@ ScreenManager:
                 icon: "arrow-right"
                 pos_hint: {'center_x': 0.5, 'center_y': 0.1}
                 on_press: root.manager.current = 'A'
+```
+
+### Evidence
+![](images/quiz_042_evidence1.png)
+![](images/quiz_042_evidence2.png)
+*fig. 2* **Screenshot of popup screen**

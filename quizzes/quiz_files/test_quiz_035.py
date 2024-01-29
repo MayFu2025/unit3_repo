@@ -1,7 +1,7 @@
-# test_quiz_038.py
+# test_quiz_035.py
 
 import pytest
-from quiz_037 import Account
+from quiz_035 import Account
 
 def test_empty_account():
     new_account = Account()

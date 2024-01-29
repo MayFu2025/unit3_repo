@@ -1,3 +1,12 @@
+# Quiz 038
+<hr>
+
+### Prompt
+![](images/quiz_038_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+```.py
 from matplotlib import pyplot as plt
 import random
 
@@ -27,3 +36,8 @@ class SalemanMap:
 test = SalemanMap()
 test.generate_data(['Kobe', 'Tokyo', 'Nagoya', 'Kyoto', 'Saitama', "Yokohama", "Osaka", "Sapporo", "Fukuoka", "Kawasaki"])
 test.get_map()
+```
+
+### Evidence
+![](images/quiz_038_evidence.png)
+*fig. 2* **Screenshot of created figure**

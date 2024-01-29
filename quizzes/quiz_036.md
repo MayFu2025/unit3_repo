@@ -1,3 +1,17 @@
+# Quiz 036
+<hr>
+
+### Prompt
+![](images/quiz_036_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+UML Diagram:
+![](images/quiz_036_diagram.png)
+*fig. 2* **UML diagram for described classes**
+
+Classes:
+```.py
 class Person():
     def __init__(self, name, age):
         self.name = name
@@ -25,7 +39,7 @@ class Classroom():
 
     def add_student(self, student:Student):
         self.students.append(student)
-
+    
     def remove_student(self, student:Student):
         self.students.remove(student)
 
@@ -34,3 +48,12 @@ class Classroom():
         for student in self.students:
             sum += student.get_grade()
         return sum / len(self.students)
+```
+
+Testcase:
+```.py
+```
+
+### Evidence
+![](images/quiz_001_evidence.png)
+*fig. 3* **Screenshot of output in console when running test file**

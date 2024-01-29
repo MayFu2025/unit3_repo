@@ -1,5 +1,5 @@
 import pytest
-from quiz_035 import mystery
+from quiz_033 import mystery
 
 def test_empty_lists():
   assert mystery([], []) == []

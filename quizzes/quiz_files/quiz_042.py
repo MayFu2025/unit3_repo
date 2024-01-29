@@ -1,21 +1,22 @@
-# Tic Tac Toe Game, meant to be quiz 041
+# Meant to be quiz 42
 
 from kivymd.app import MDApp
-from kivymd.uix.button import MDFlatButton
 from kivy.core.window import Window
+from kivymd.uix.screen import MDScreen
 
-class MyButton(MDFlatButton):
-    pass
-
-class quiz_042(MDApp):
+class quiz_042(MDApp): #Meant to be named mystery
     def build(self):
-        Window.size = (500, 500)
+        Window.size = (400, 700)
         return
 
-    def button_pressed(self, button):
-        button.text = "pressed"
-        button.md_bg_color = "#002aff"
+class MysteryPageA(MDScreen):
+    def message1(self):
+        self.parent.current = 'Second'
+    pass
 
+class MysteryPageB(MDScreen):
+    def message2(self):
+        self.parent.current = 'First'
 
-show = quiz_042()
-show.run()
+t = quiz_042()
+t.run()
