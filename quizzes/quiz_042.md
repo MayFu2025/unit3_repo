@@ -64,4 +64,4 @@ ScreenManager:
 ### Evidence
 ![](images/quiz_042_evidence1.png)
 ![](images/quiz_042_evidence2.png)
-*fig. 2* **Screenshot of popup screen**
+*fig. 2* **Screenshots of popup screen (First page, second page after pressing button)**

@@ -59,4 +59,8 @@ Screen:
 
 ### Evidence
 ![](images/quiz_039_evidence.png)
-*fig. 2* **Screenshot of screen popup**
+*fig. 2* **Screenshot of screen popup (after pressing button 15 times)**
+
+### UML Diagram
+![](images/quiz_001_bool.jpeg)
+*fig. 3* **UML Diagram for solution**
