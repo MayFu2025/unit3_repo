@@ -1,6 +1,7 @@
-Screen:
+MDScreen:
+        id: my_screen
         size: 1000,1000
-        md_bg_color: "white"
+        md_bg_color: 1,1,1,1
 
         MDRaisedButton:
                 id: my_button
@@ -10,8 +11,6 @@ Screen:
                 md_bg_color: "black"
                 on_press:
                         app.button_pressed()
-                        if self.parent.md_bg_color == [1, 1, 1, 1]: self.parent.md_bg_color = "black"
-                        else: self.parent.md_bg_color = "white"
 
 
         MDLabel:

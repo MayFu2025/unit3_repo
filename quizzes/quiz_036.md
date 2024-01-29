@@ -6,11 +6,7 @@
 *fig. 1* **Screenshot of quiz slides**
 
 ### Solution
-UML Diagram:
-![](images/quiz_036_diagram.png)
-*fig. 2* **UML diagram for described classes**
-
-Classes:
+Classes: `quiz_036.py`
 ```.py
 class Person():
     def __init__(self, name, age):
@@ -50,10 +46,49 @@ class Classroom():
         return sum / len(self.students)
 ```
 
-Testcase:
+Testcase: `test_quiz_036.py`
 ```.py
+import pytest
+from quiz_036 import Student
+from quiz_036 import Classroom
+
+def test_add_student():
+    classroom = Classroom()
+    student = Student("John", 18, 90)
+    classroom.add_student(student)
+    assert student in classroom.students
+
+def test_remove_student():
+    classroom = Classroom()
+    student = Student("John", 18, 90)
+    classroom.add_student(student)
+    classroom.remove_student(student)
+    assert student not in classroom.students
+
+def test_remove_non_existing_student():
+    classroom = Classroom()
+    student = Student("John", 18, 90)
+    with pytest.raises(ValueError):
+        classroom.remove_student(student)
+
+def test_get_average_score():
+    classroom = Classroom()
+    student1 = Student("John", 18, 90)
+    student2 = Student("Jane", 19, 80)
+    classroom.add_student(student1)
+    classroom.add_student(student2)
+    assert classroom.class_average() == (90 + 80) / 2
+
+def test_empty_classroom():
+    classroom = Classroom()
+    with pytest.raises(ValueError):
+        classroom.class_average()
 ```
 
 ### Evidence
-![](images/quiz_001_evidence.png)
-*fig. 3* **Screenshot of output in console when running test file**
+![](images/quiz_036_evidence.png)
+*fig. 2* **Screenshot of output in console when running test file**
+
+### UML Diagram
+![](images/quiz_036_diagram.png)
+*fig. 3* **UML diagram for described classes**

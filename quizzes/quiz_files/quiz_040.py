@@ -8,10 +8,10 @@ class quiz_040(MDApp):
         screen = self.root.ids.my_screen
         button = self.root.ids.my_button
 
-        if screen.md_bg_color == "#ffffff":
-            screen.md_bg_color = "#000000"
+        if screen.md_bg_color == [1, 1, 1, 1]:
+            screen.md_bg_color = [0, 0, 0, 1]
         else:
-            screen.md_bg_color = "#ffffff"
+            screen.md_bg_color = [1, 1, 1, 1]
 
         if button.text == "Dark Mode":
             button.text = "Light Mode"

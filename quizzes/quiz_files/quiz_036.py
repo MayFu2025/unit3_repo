@@ -1,5 +1,5 @@
 class Person():
-    def __init__(self, name, age):
+    def __init__(self, name:str, age:int):
         self.name = name
         self.age = age
     def get_name(self):
@@ -10,7 +10,7 @@ class Person():
 
 
 class Student(Person):
-    def __init__(self, name, age, grade):
+    def __init__(self, name:str, age:int, grade:int):
         super(Student, self).__init__(name, age)
         self.grade = grade
 
@@ -27,10 +27,15 @@ class Classroom():
         self.students.append(student)
 
     def remove_student(self, student:Student):
-        self.students.remove(student)
+        if student not in self.students:
+            raise ValueError("Student does not exist in the classroom")
+        else:
+            self.students.remove(student)
 
     def class_average(self):
         sum = 0
+        while len(self.students) == 0:
+            raise ValueError("Classroom is empty")
         for student in self.students:
             sum += student.get_grade()
         return sum / len(self.students)

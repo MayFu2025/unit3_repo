@@ -30,7 +30,7 @@ class AccountingProgram(Compound_Interest):
         return f"{self.customer_name} will have {self.calculate_interest():.2f} USD in {self.n_years} years if the principal is {self.principal} USD with {self.rate*100}% annual compound interest."
 
 
-May = Accounting()
+May = AccountingProgram()
 May.set_principal(1000)
 May.set_rate(0.05)
 May.set_years(10)
