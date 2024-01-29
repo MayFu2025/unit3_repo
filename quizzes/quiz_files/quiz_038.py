@@ -9,7 +9,7 @@ class SalemanMap:
 
     def get_map(self):
         for n in range(len(self.name)):
-            plt.plot((self.x[n]), (self.y[n]), marker="o")
+            plt.plot((self.x[n]), (self.y[n]), marker="o", color="red")
             plt.annotate(self.name[n],(self.x[n], self.y[n]))
         plt.xlabel("Distance (km)")
         plt.xlim(0,100)

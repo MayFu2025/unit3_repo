@@ -24,7 +24,7 @@ show = quiz_039()
 show.run()
 ```
 Kivymd code:
-```.kivy
+```.kv
 Screen:
         size: 1000,1000
 

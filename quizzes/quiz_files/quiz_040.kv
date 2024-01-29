@@ -1,20 +1,27 @@
 MDScreen:
-        id: my_screen
         size: 1000,1000
-        md_bg_color: 1,1,1,1
 
-        MDRaisedButton:
-                id: my_button
-                pos: 0,0
-                text: "Dark Mode"
-                text_color: "#999999"
-                md_bg_color: "black"
-                on_press:
-                        app.button_pressed()
-
-
-        MDLabel:
-                text: "May"
-                font_style: "H2"
-                halign: 'center'
+        MDBoxLayout:
+                id: my_screen
+                orientation: "vertical"
+                size_hint: 1, 1
                 pos_hint: {"center_x": .5, "center_y": .5}
+                md_bg_color: "white"
+
+                MDLabel:
+                        id: my_label
+                        text: "May"
+                        theme_text_color: "Custom"
+                        text_color: "black"
+                        font_style: "H2"
+                        halign: 'center'
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                MDRaisedButton:
+                        id: my_button
+                        pos: 0,0
+                        text: "Dark Mode"
+                        text_color: "#999999"
+                        md_bg_color: "black"
+                        on_press:
+                                app.button_pressed()
