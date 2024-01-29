@@ -5,7 +5,13 @@ class quiz_040(MDApp):
         return
 
     def button_pressed(self):
+        screen = self.root.ids.my_screen
         button = self.root.ids.my_button
+
+        if screen.md_bg_color == "#ffffff":
+            screen.md_bg_color = "#000000"
+        else:
+            screen.md_bg_color = "#ffffff"
 
         if button.text == "Dark Mode":
             button.text = "Light Mode"
