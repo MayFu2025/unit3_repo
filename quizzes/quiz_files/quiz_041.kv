@@ -5,43 +5,64 @@ Screen:
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
                 MDLabel:
-                        text: "TIC TAC TOE"
+                        text: "TIC TAC TOE by May"
                         halign: 'center'
-                        size_hint: 1, 0.25
+                        size_hint: 1, 0.2
+                        bold: True
 
                 MDLabel:
-                                id: turn_label
-                                text: "Player 1's Turn"
-                                halign: 'center'
+                        id: turn_label
+                        text: "Player A's Turn"
+                        halign: 'center'
+                        size_hint: 1, 0.1
+                        custom_color: True
+                        text_color: 0, 0, 0, 1
 
                 MDBoxLayout:
                         orientation: 'horizontal'
-                        size_hint: 1, 0.25
+                        size_hint: 1, 0.23
 
                         MyButton:
+                                id : 1
+                                name: 1
                         MyButton:
+                                id : 2
+                                name: 2
                         MyButton:
-
-                MDBoxLayout:
-                        orientation: 'horizontal'
-                        size_hint: 1, 0.25
-
-                        MyButton:
-                        MyButton:
-                        MyButton:
+                                id : 3
+                                name: 3
 
                 MDBoxLayout:
                         orientation: 'horizontal'
-                        size_hint: 1, 0.25
+                        size_hint: 1, 0.23
 
                         MyButton:
+                                id : 4
+                                name: 4
                         MyButton:
+                                id : 5
+                                name: 5
                         MyButton:
+                                id : 6
+                                name: 6
 
+                MDBoxLayout:
+                        orientation: 'horizontal'
+                        size_hint: 1, 0.23
+
+                        MyButton:
+                                id : 7
+                                name: 7
+                        MyButton:
+                                id : 8
+                                name: 8
+                        MyButton:
+                                id : 9
+                                name: 9
 
 <MyButton>:
         size_hint: 1, 1
-        md_bg_color: '#ff0000'
+        md_bg_color: '##d6d6d6'
         text_color: "#ffffff"
         on_press:
-                app.button_pressed_x(self)
+                app.button_pressed(self)
