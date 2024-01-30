@@ -4,15 +4,12 @@ Screen:
                 size_hint: 0.8, 0.8
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
-                MDBoxLayout:
-                        orientation: 'vertical'
+                MDLabel:
+                        text: "TIC TAC TOE"
+                        halign: 'center'
                         size_hint: 1, 0.25
 
-                        MDLabel:
-                                text: "TIC TAC TOE"
-                                halign: 'center'
-
-                        MDLabel:
+                MDLabel:
                                 id: turn_label
                                 text: "Player 1's Turn"
                                 halign: 'center'

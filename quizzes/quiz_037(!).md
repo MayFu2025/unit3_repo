@@ -50,7 +50,7 @@ class AccountingProgram(CompoundInterest):
         return f"{self.customer_name} will have {self.calculate_interest()} USD in {self.n_years} years if the principal is {self.principal} USD with {self.rate*100}% annual compound interest."
 ```
 
-![](images/quiz_037_diagram.png)
+![](images/quiz_037_diagram.jpg)
 *fig. 2* **UML Diagram of described class**
 
 ### Evidence

@@ -72,5 +72,5 @@ MDScreen:
 *fig. 2* **Screenshots of popup screen, light mode and dark mode**
 
 ### UML Diagram
-![](images/quiz_001_bool.jpeg)
+![](images/quiz_040_diagram.jpg)
 *fig. 3* **UML Diagram for solution**

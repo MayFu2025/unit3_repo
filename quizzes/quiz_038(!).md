@@ -43,5 +43,5 @@ test.get_map()
 *fig. 2* **Screenshot of created figure**
 
 ### UML Diagram
-![](images/quiz_001_bool.jpeg)
+![](images/quiz_038_diagram.jpg)
 *fig. 3* **UML Diagram for solution**

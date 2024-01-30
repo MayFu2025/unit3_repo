@@ -90,5 +90,5 @@ def test_empty_classroom():
 *fig. 2* **Screenshot of output in console when running test file**
 
 ### UML Diagram
-![](images/quiz_036_diagram.png)
+![](images/quiz_036_diagram.jpg)
 *fig. 3* **UML diagram for described classes**

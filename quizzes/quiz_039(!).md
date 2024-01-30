@@ -62,5 +62,5 @@ Screen:
 *fig. 2* **Screenshot of screen popup (after pressing button 15 times)**
 
 ### UML Diagram
-![](images/quiz_001_bool.jpeg)
+![](images/quiz_039_diagram.jpg)
 *fig. 3* **UML Diagram for solution**

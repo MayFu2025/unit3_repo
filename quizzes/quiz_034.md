@@ -1,3 +1,12 @@
+# Quiz 034
+<hr>
+
+### Prompt
+![](images/quiz_034_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+```.py
 symbols = {
             100: "C",
             90: "XC",
@@ -19,3 +28,8 @@ def to_roman(num:int):
             output += symbols[key]
             num -= key
     return output
+```
+
+### Evidence
+![](images/quiz_034_evidence.png)
+*fig. 2* **Screenshot of output in console**
