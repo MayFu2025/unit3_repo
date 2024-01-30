@@ -67,9 +67,12 @@ MDScreen:
 ```
 
 ### Evidence
-![](images/quiz_040_evidence1.png)
-![](images/quiz_040_evidence2.png)
-*fig. 2* **Screenshots of popup screen, light mode and dark mode**
+
+
+https://github.com/MayFu2025/unit3_repo/assets/122759229/c10b5d02-0a36-419a-854a-bdfcde40fee8
+
+
+*fig. 2* **Video of popup screen**
 
 ### UML Diagram
 ![](images/quiz_040_diagram.jpg)
