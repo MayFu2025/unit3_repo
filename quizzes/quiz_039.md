@@ -58,8 +58,12 @@ Screen:
 ```
 
 ### Evidence
-![](images/quiz_039_evidence.png)
-*fig. 2* **Screenshot of screen popup (after pressing button 15 times)**
+
+
+https://github.com/MayFu2025/unit3_repo/assets/122759229/f7c366c9-d163-4353-81a8-a18516600fc3
+
+
+*fig. 2* **Video of popup screen**
 
 ### UML Diagram
 ![](images/quiz_039_diagram.jpg)
