@@ -63,4 +63,8 @@ ScreenManager:
 
 ### Evidence
 
-*fig. 2* **Screenshots of popup screen (First page, second page after pressing button)**
+
+https://github.com/MayFu2025/unit3_repo/assets/122759229/ace48458-d29c-4831-9738-d2563e08ec26
+
+
+*fig. 2* **Video of popup screen**
