@@ -111,7 +111,7 @@ ScreenManager:
                         password: True
 
                 MDTextField:
-                        id: password
+                        id: confirm_pass
                         hint_text: "Confirm password"
                         icon_left: 'key'
                         pos_hint: {'center_x': 0.5, 'center_y': 0.5}
@@ -129,6 +129,7 @@ ScreenManager:
                                 font_size: 36
                                 size_hint_x: 0.5
                                 pos_hint_x: 0
+                                on_press: root.try_signup()
 
                         MDRaisedButton:
                                 id: cancel_button
@@ -136,4 +137,4 @@ ScreenManager:
                                 font_size: 36
                                 size_hint_x: 0.5
                                 pos_hint_x: 1
-                                on_release: root.try_change()
+                                on_press: root.try_change()

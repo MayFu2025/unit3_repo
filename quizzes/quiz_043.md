@@ -40,7 +40,3 @@ values('Your Name', 2016, 'CoMix Wave Films', 'Makoto Shinkai', 'Anime', 5000000
 ### Evidence
 ![](images/quiz_043_evidence.png)
 *fig. 2* **Screenshot of table in database**
-
-### UML Diagram
-![](images/quiz_001_bool.jpeg)
-*fig. 3* **UML Diagram for solution**
