@@ -72,5 +72,12 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="quiz_045.db" uuid="8daf2771-8b74-4196-8609-1c279f786b7e">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/quizzes/quiz_files/quiz_045.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
