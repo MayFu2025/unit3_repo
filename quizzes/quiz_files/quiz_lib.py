@@ -1,8 +1,6 @@
 import sqlite3
 from passlib.hash import sha256_crypt
 
-hasher = sha256_crypt.using(rounds=30000)
-
 class DatabaseWorker:
     def __init__(self, name:str):
         self.name_db = name
@@ -30,8 +28,10 @@ class DatabaseWorker:
     def close(self):
         self.connection.close()
 
-    def make_hash(text: str) -> str:
-        return hasher.hash(text)
 
-    def check_text(hashed: str, text: str) -> bool:
-        return hasher.verify(text, hashed)
+hasher = sha256_crypt.using(rounds=30000)
+def make_hash(text: str) -> str:
+    return hasher.hash(text)
+
+def check_text(hashed: str, text: str) -> bool:
+    return hasher.verify(text, hashed)
