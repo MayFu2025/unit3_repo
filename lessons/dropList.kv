@@ -1,0 +1,16 @@
+MDScreen:
+        size: 500, 700
+
+        MDDropDownItem:
+                id: dropdown_user
+                pos_hint: {'center_x':0.5, 'center_y':0.5}
+                size_hint: None, None  # Relative
+                size: 300, 50  # Absolute
+                text: 'Select customer'
+                on_release: app.open_menu(self)
+
+        MDLabel:
+                id: customer
+                text: ""
+                pos_hint: {'center_x':0.5, 'center_y':0.2}
+                halign: 'center'
