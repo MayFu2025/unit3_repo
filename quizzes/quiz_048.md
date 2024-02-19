@@ -2,7 +2,7 @@
 <hr>
 
 ### Prompt
-![](images/quiz_001_slide.png)
+![](images/quiz_048_slide.png)
 *fig. 1* **Screenshot of quiz slides**
 
 ### Solution
@@ -23,7 +23,7 @@ print(total)
 ```
 
 ### Evidence
-![](images/quiz_001_evidence.png)
+![](images/quiz_048_evidence.png)
 *fig. 2* **Screenshot of output in console**
 
 ### UML Diagram

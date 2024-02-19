@@ -121,4 +121,4 @@ db = DatabaseWorker("payments.db")
 db.run_query(create)
 
 test.run()
-test.db_connection.close()
+test.db_connection.close()2
