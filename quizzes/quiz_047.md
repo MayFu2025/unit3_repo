@@ -1,3 +1,12 @@
+# Quiz 047
+<hr>
+
+### Prompt
+![](images/quiz_047_slide.png)
+*fig. 1* **Screenshot of quiz slides**
+
+### Solution
+```.py
 from quiz_lib import DatabaseWorker, check_text
 
 db = DatabaseWorker(name='bitcoin_exchange.db')
@@ -10,3 +19,12 @@ for n in result:
         print(f"Tx(id={n[0]}) Signature Matches")
     else:
         print(f"Tx(id={n[0]}) Error Signature")
+```
+
+### Evidence
+![](images/quiz_047_evidence.png)
+*fig. 2* **Screenshot of output in console**
+
+### ER Diagram
+![](images/quiz_047_er.jpeg)
+*fig. 3* **UML Diagram for solution**
