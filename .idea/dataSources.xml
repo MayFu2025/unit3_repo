@@ -91,24 +91,24 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="bitcoin_exchange" uuid="23d56aed-89ca-4123-adef-d2327d25254e">
+    <data-source source="LOCAL" name="bitcoin_exchange.db" uuid="6105791b-a096-40b7-b00a-bb42a56ed08d">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/quizzes/quiz_files/bitcoin_exchange.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="payments [2]" uuid="42e67498-ee5e-4b8a-b39e-d65de02a7f05">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/quizzes/quiz_files/quiz_databses/payments.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.43.0/org/xerial/sqlite-jdbc/3.43.0.0/sqlite-jdbc-3.43.0.0.jar</url>
         </library>
       </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="bitcoin_exchange_lesson.db" uuid="845a798f-cd2f-4557-8aeb-2d05405ccb23">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/lessons/bitcoin_exchange_lesson.db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

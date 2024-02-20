@@ -7,36 +7,28 @@
 
 ### Solution
 ```.sqlite
-create table if not exists Genre (
-    id integer primary key,
-    name varchar
-);
+select count(*) as number_of_tables from sqlite_master where type = 'table';
 
-insert into Genre(name)
-values('Fantasy');
+select count(*) as MaleFriendly from INHABITANT where gender = 'Male' and state = 'Friendly';
 
-create table if not exists Movies (
-    id integer primary key,
-    name varchar,
-    year int,
-    producer varchar,
-    director varchar,
-    category varchar(100),
-    budget real,
-    genreId integer not null,
-    foreign key (genreId) references genre(id)
-);
+select V.name, avg(gold) from INHABITANT join VILLAGE V on INHABITANT.villageid = V.villageid group by V.name;
 
-insert into Movies(name, year, producer, director, category, budget, genreId)
-values('La La Land', 2016, 'Lionsgate Films', 'Damien Chazelle', 'Musical', 30000000, (select id from Genre where name = 'Romance'));
+select count(*) as AItems from ITEM where item like 'A%';
 
-insert into Movies(name, year, producer, director, category, budget, genreId)
-values('Fantastic Beasts and Where to Find Them', 2016, 'Warner Bros', 'David Yates', 'Fantasy', 600000000, (select id from Genre where name = 'Fantasy'));
+select count(distinct job) from INHABITANT;
 
-insert into Movies(name, year, producer, director, category, budget, genreId)
-values('Your Name', 2016, 'CoMix Wave Films', 'Makoto Shinkai', 'Anime', 50000000, (select id from Genre where name = 'Anime'));
+select item as HerbalistItems from ITEM it, INHABITANT i where i.job = 'Herbalist' and i.personid = it.owner;
 ```
 
 ### Evidence
-![](images/quiz_043_evidence.png)
-*fig. 2* **Screenshot of table in database**
+![](images/quiz_043_evidence1.png)
+![](images/quiz_043_evidence2.png)
+![](images/quiz_043_evidence3.png)
+![](images/quiz_043_evidence4.png)
+![](images/quiz_043_evidence5.png)
+![](images/quiz_043_evidence6.png)
+*fig. 2* **Screenshots of output in console**
+
+### UML Diagram
+![](images/quiz_001_bool.jpeg)
+*fig. 3* **UML Diagram for solution**

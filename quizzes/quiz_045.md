@@ -41,6 +41,5 @@ db.close()
 ![](images/quiz_045_evidence.png)
 *fig. 2* **Screenshot of output in console**
 
-### UML Diagram
-![](images/quiz_001_bool.jpeg)
-*fig. 3* **UML Diagram for solution**
+### ER Diagram
+**Diagram given in quiz slides**
