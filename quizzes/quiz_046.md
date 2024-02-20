@@ -359,5 +359,9 @@ https://github.com/MayFu2025/unit3_repo/assets/122759229/807a6a1d-43eb-41fe-a481
 *fig. 2* **Video of popup screen**
 
 ### UML Diagram
-![](images/quiz_046_diagram.png)
+![](images/quiz_046_diagram1.jpeg)
 *fig. 3* **UML Diagram for solution**
+
+### ER diagram
+![](images/quiz_046_diagram2.png)
+*fig. 3* **ER diagram for `payments`**
