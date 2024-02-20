@@ -1,7 +1,20 @@
 import sqlite3
 
 from kivymd.app import MDApp
-from quiz_lib import DatabaseWorker
+from quiz_lib import DatabaseWorker, make_hash, check_text
+
+
+def check_frauds():
+    output = []
+    query = "select * from payments"
+    data = db.search(query, multiple=True)
+    print(data)
+    for row in data:
+        text = f"base{row[1]},inhabitant{row[2]},income_tax{row[3]},pension{row[4]},health{row[5]},total{row[6]}"
+        if not check_text(text=text, hashed=row[7]):
+            output.append(f"Signature mismatch: transaction id {row[0]}")
+    return output
+
 
 class quiz_046(MDApp):
     def __init__(self, **kwargs):
@@ -11,77 +24,47 @@ class quiz_046(MDApp):
     def build(self):
         return
 
-    def save(self):
-        pass
-
     def update(self):
-        #This function updates all the labels in the form using the base salary and the percentage
-        # Pseudocode
-        # 1- get the base salary from the GUI
-        # 2- if base salary define total=int(base) and an empty string to store build a hash (for_hash="") if no base then end the function
-        # 3- for Each TextField with ids: "inhabitant","income_tax","pension","health" get the text property
-        # 4- if the TextField.text has a number (value), calculate the equation new_value="(base*int(value)//100) JPY" and subbctract the equation to the total
-        # 5- if no: then new_value = " JPY"
-        # 6- set the label next to the TextField (inhabitant_label, income_tax_label, etc) to the variable new_value
-        # 7- concatenate to the hash variable the f"{id}{value}"
-        # 8- set the text of the element id=total to the total with the JPY symbol
-        # 9- encrypt the hash and change the text of the label with id=hash to the last 50 characters of the hash
-
         base = self.root.ids.base.text
-
         if base:
-            base_int = int(base)  # Why not define as total
-
-            health = int(self.root.ids.inhabitant.text or '0')
+            base_int = int(base)
+            health = int(self.root.ids.health.text or '0')
             pension = int(self.root.ids.pension.text or '0')
             income_tax = int(self.root.ids.income_tax.text or '0')
-            inhabitant = int(self.root.ids.inhabitant.text or '0')  # or 0 takes 0 if none
+            inhabitant = int(self.root.ids.inhabitant.text or '0')
 
-            health_jpy = base_int * (health // 100)
-            self.root.ids.health_label.text = f"{health} JPY"
+            health_jpy = base_int * health // 100
+            self.root.ids.health_label.text = f"{health_jpy} JPY"
 
-            pension_jpy = base_int * (pension // 100)
+            pension_jpy = base_int * pension // 100
             self.root.ids.pension_label.text = f"{pension_jpy} JPY"
 
-            income_tax_jpy = base_int * (income_tax // 100)
-            self.root.ids.income_tax_label.text = f"{income_tax} JPY"
+            income_tax_jpy = base_int * income_tax // 100
+            self.root.ids.income_tax_label.text = f"{income_tax_jpy} JPY"
 
-            inhabitant_jpy = base_int * (inhabitant // 100)
+            inhabitant_jpy = base_int * inhabitant // 100
             self.root.ids.inhabitant_label.text = f"{inhabitant_jpy} JPY"
 
-            total = base_int - pension_jpy - inhabitant_jpy - income_tax_jpy - health_jpy
+            total = base_int - pension_jpy - health_jpy - income_tax_jpy - inhabitant_jpy
             self.root.ids.salary_label.text = f"{total} JPY"
 
-            hash = f"base{base_int},inhabitant{inhabitant},income_tax{income_tax},pension{pension},health{health},total{total}"
+            to_hash = f"base{base_int},inhabitant{inhabitant_jpy},income_tax{income_tax_jpy},pension{pension_jpy},health{health_jpy},total{total}"
 
             # Putting data inside self is called encapsulation (opposite is called decapsulation)
             self.components["base"] = base_int
-            self.components["pension"] = pension
-            self.components["health"] = health
-            self.components["inhabitant"] = inhabitant
-            self.components["income_tax"] = income_tax
+            self.components["pension"] = pension_jpy
+            self.components["health"] = health_jpy
+            self.components["inhabitant"] = inhabitant_jpy
+            self.components["income_tax"] = income_tax_jpy
             self.components["total"] = total
-            self.components["hash"] = hash
+            self.components["hash"] = make_hash(text=to_hash)
 
-        #calculate total
-            ids = ["inhabitant", "income_tax", "pension", "health"]
-
-        # update the percentage
+            self.root.ids.hash.text = self.components["hash"][-50:]
 
         else:
             pass
 
     def save(self):
-        #repeat the algorithm in update but create variables to save the amount of each item:
-        #base = int(base)
-        #inhabitant = amount in JPY to remove from base for inhabitant tax
-        #income_tax = amount in JPY to remove from base for income tax
-        #pension = amount in JPY to remove from base for pension tax
-        #health = amount in JPY to remove from base for health tax
-        #total = total net salary
-        #hahs = hash of the calcualtions in the format
-        #inhabitant4,income_tax3,pension2,health1,total1103  (here the numbers next to the category are percentages)
-
         base_int = self.components["base"]
         pension = self.components["pension"]
         health = self.components["health"]
@@ -91,12 +74,13 @@ class quiz_046(MDApp):
         hash_str = self.components["hash"]
 
         query = f"""INSERT into payments(base, inhabitant, income_tax, pension, health, total, hash)
-        values({base_int}, {inhabitant}, {income_tax}, {pension}, {health}, {total}, '{DatabaseWorker.make_hash(text=hash_str)}') 
+        values({base_int}, {inhabitant}, {income_tax}, {pension}, {health}, {total}, '{hash_str}') 
         """
 
         db.run_query(query)
-        db.close()
         self.root.ids.hash.text = f"Payment saved"
+        print(check_frauds())
+        db.close()
 
     def clear(self):
         for label in ["base", "inhabitant","income_tax","pension","health"]:
