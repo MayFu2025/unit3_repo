@@ -26,5 +26,5 @@ for n in result:
 *fig. 2* **Screenshot of output in console**
 
 ### ER Diagram
-![](images/quiz_047_er.jpeg)
-*fig. 3* **UML Diagram for solution**
+![](images/quiz_047_diagram.png)
+*fig. 3* **ER Diagram for `bitcoin_exchange.db`**

@@ -26,6 +26,6 @@ print(total)
 ![](images/quiz_048_evidence.png)
 *fig. 2* **Screenshot of output in console**
 
-### UML Diagram
-![](images/quiz_001_bool.jpeg)
-*fig. 3* **UML Diagram for solution**
+### ER Diagram
+![](images/quiz_047_diagram.png)
+*fig. 3* **ER Diagram for `bitcoin_exchange.db`**

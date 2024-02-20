@@ -29,6 +29,6 @@ select item as HerbalistItems from ITEM it, INHABITANT i where i.job = 'Herbalis
 ![](images/quiz_043_evidence6.png)
 *fig. 2* **Screenshots of output in console**
 
-### UML Diagram
-![](images/quiz_001_bool.jpeg)
-*fig. 3* **UML Diagram for solution**
+### ER Diagram
+![](images/quiz_043_diagram.png)
+*fig. 3* **ER Diagram for solution**

@@ -31,23 +31,25 @@ class quiz_046(MDApp):
 
         if base:
             base_int = int(base)  # Why not define as total
-            hash = ""
 
-            inhabitant = int(self.root.ids.inhabitant.text or '0')  # or 0 takes 0 if none
-            income_tax = int(self.root.ids.income_tax.text or '0')
-            pension = int(self.root.ids.pension.text or '0')
             health = int(self.root.ids.inhabitant.text or '0')
+            pension = int(self.root.ids.pension.text or '0')
+            income_tax = int(self.root.ids.income_tax.text or '0')
+            inhabitant = int(self.root.ids.inhabitant.text or '0')  # or 0 takes 0 if none
 
-            pension_jpy = base_int * (pension//100)
-            inhabitant_jpy = base_int * (inhabitant // 100)
-            income_tax_jpy = base_int * (income_tax // 100)
             health_jpy = base_int * (health // 100)
-            total = base_int - pension_jpy - inhabitant_jpy - income_tax_jpy - health_jpy
-
-            self.root.ids.pension_label.text = f"{pension_jpy} JPY"
-            self.root.ids.income_tax_label.text = f"{income_tax} JPY"
-            self.root.ids.inhabitant_label.text = f"{inhabitant_jpy} JPY"
             self.root.ids.health_label.text = f"{health} JPY"
+
+            pension_jpy = base_int * (pension // 100)
+            self.root.ids.pension_label.text = f"{pension_jpy} JPY"
+
+            income_tax_jpy = base_int * (income_tax // 100)
+            self.root.ids.income_tax_label.text = f"{income_tax} JPY"
+
+            inhabitant_jpy = base_int * (inhabitant // 100)
+            self.root.ids.inhabitant_label.text = f"{inhabitant_jpy} JPY"
+
+            total = base_int - pension_jpy - inhabitant_jpy - income_tax_jpy - health_jpy
             self.root.ids.salary_label.text = f"{total} JPY"
 
             hash = f"base{base_int},inhabitant{inhabitant},income_tax{income_tax},pension{pension},health{health},total{total}"
@@ -121,4 +123,4 @@ db = DatabaseWorker("payments.db")
 db.run_query(create)
 
 test.run()
-test.db_connection.close()2
+test.db_connection.close()

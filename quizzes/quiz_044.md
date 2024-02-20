@@ -15,5 +15,5 @@
 *fig. 2* **Screenshot of output in console**
 
 ### ER Diagram
-![](images/quiz_001_bool.jpeg)
-*fig. 3* **ER Diagram for cmoon.db**
+![](images/quiz_044_diagram.png)
+*fig. 3* **ER Diagram for `cmoon.db`**

@@ -1,4 +1,4 @@
-from quiz_lib import DatabaseWorker, check_text, make_hash
+from quiz_lib import DatabaseWorker, check_text
 
 db = DatabaseWorker(name='bitcoin_exchange.db')
 query = "Select * from ledger"
