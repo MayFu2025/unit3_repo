@@ -1,0 +1,34 @@
+ScreenManager:
+        id: scr_manager
+        TableScreen:
+                name: "TableScreen"
+
+<TableScreen>:
+        MDLabel:
+                text: 'Ledger'
+                font_style: 'H2'
+                halign: 'center'
+                size_hint: 0.8, 0.08
+                pos_hint: {'center_x':0.5, 'top':0.9}
+        MDBoxLayout:
+                orientation: 'horizontal'
+                pos_hint: {'center_x':0.5, 'top':0.2}
+                size_hint: 0.8, 0.08
+                items_spacing: 5
+                MDTextField:
+                        id: sender
+                        hint_text: 'Sender'
+                        size_hint_x: 0.15
+                MDTextField:
+                        id: receiver
+                        hint_text: 'Receiver'
+                        size_hint_x: 0.15
+                MDTextField:
+                        id: amount
+                        filter: 'integer'
+                        hint_text: 'Amount'
+                        size_hint_x: 0.15
+                MDRaisedButton:
+                        text: 'save'
+                        size_hint_x: 0.1
+                        on_release: root.save()
